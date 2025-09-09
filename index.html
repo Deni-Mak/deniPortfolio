@@ -2,79 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devis Makavana - Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devis Makavana - Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafc;
+      color: #333;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+    }
+    .navbar-brand { font-weight: bold; color: #fff !important; }
+    .navbar-nav .nav-link { color: #fff !important; font-weight: 500; }
+    .navbar-nav .nav-link:hover { color: #ffcc00 !important; }
+
+	/* About Section */
+	#about {
+	  background: rgba(255, 255, 255, 0.8); /* white glass effect */
+	  border-radius: 10px;
+	  padding: 3rem 1rem;
+	  margin-bottom: 2rem;
+	}
+
+	/* Skills Section */
+	#skills {
+	  background: rgba(37, 117, 252, 0.1); /* light blue transparent */
+	  border-radius: 10px;
+	  padding: 3rem 1rem;
+	  margin-bottom: 2rem;
+	}
+
+	/* Experience Section */
+	#experience {
+	  background: rgba(0, 0, 0, 0.05); /* light gray transparent */
+	  border-radius: 10px;
+	  padding: 3rem 1rem;
+	  margin-bottom: 2rem;
+	}
+
+	/* Contact Section */
+	#contact {
+	  background: rgba(106, 17, 203, 0.1); /* purple transparent */
+	  border-radius: 10px;
+	  padding: 3rem 1rem;
+	  margin-bottom: 2rem;
+	}
+
+    /* Hero */
+    .hero {
+      margin-top: 56px;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("https://source.unsplash.com/1600x900/?technology,coding,developer");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero img {
+      width: 160px; height: 160px; border-radius: 50%;
+      border: 4px solid #fff; margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Chips */
+    .chip {
+      background: #2575fc; color: #fff;
+      padding: 10px 18px; border-radius: 25px;
+      display: inline-block; margin: 5px;
+      transition: 0.3s;
+    }
+    .chip:hover { background:#6a11cb; transform:scale(1.05); }
+
+    /* Experience */
+    .carousel-item {
+      padding: 2rem;
+    }
+    .exp-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .exp-card h3 { color: #2575fc; margin-bottom: 0.5rem; }
+    .exp-card h4 { font-size: 1rem; color: #555; margin-bottom: 1rem; }
+
+    /* Contact */
+    #contact a {
+      margin: 8px;
+      padding: 12px 20px;
+      background: #2575fc;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    #contact a:hover { background:#6a11cb; transform:translateY(-3px); }
+
+    footer { background:#333; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Devis Makavana</h1>
-      <p>Email: <a href="mailto:djmakvana47@gmail.com">djmakvana47@gmail.com</a> | 
-         Phone: <a href="tel:+917405578987">+91 74055 78987</a> | 
-         <a href="https://www.linkedin.com/in/devis-makvana-340754161" target="_blank">LinkedIn</a>
-      </p>
-      <p>Gandhinagar, India</p>
-    </header>
 
-    <section>
-      <h2>Professional Summary</h2>
-      <p>With 6 years of development experience, I am a dedicated and responsible professional proficient in front-end technologies such as TypeScript (Angular), and JavaScript (AngularJS). My expertise also extends to back-end development using PHP and MVC frameworks like Laravel and CodeIgniter, Java and Node.js in addition to data analytics with MongoDB and SQL. With a strong foundation in overall software development, I also possess knowledge of AI tools like Cursor. I am committed to delivering high-quality results and constantly seek to expand my skill set in line with technological advancements.</p>
-    </section>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Devis</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><b>Languages:</b> JavaScript, TypeScript</li>
-        <li><b>FrontEnd Frameworks:</b> Angular, AngularJS</li>
-        <li><b>BackEnd Frameworks:</b> Node.js, Express.js, Laravel, CodeIgniter, Java</li>
-        <li><b>Database:</b> MongoDB, SQL, MySQL</li>
-        <li><b>Styling:</b> CSS, SCSS, Tailwind CSS, HTML5, Bootstrap</li>
-        <li><b>Dev Tools:</b> Git, GitHub, Docker, Bitbucket</li>
-      </ul>
-    </section>
+  <!-- Hero -->
+  <header class="hero">
+    <img src="https://drive.google.com/uc?export=view&id=-3ZwZQI-7mAtZzsb6Q2KsOB-V8H23vEG" alt="My Image">
+    <h1 class="fw-bold">Devis Makavana</h1>
+    <p class="lead">Frontend & Full-Stack Developer</p>
+  </header>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><b>MCA (Computer Science)</b>, Uka Tarsadia University, Maliba Campus, Bardoli (2018–2019) — GPA: 7/10</li>
-        <li><b>BCA (Computer Science)</b>, Veer Narmad South Gujarat University, Surat (2015–2018) — GPA: 7.1/10</li>
-      </ul>
-    </section>
+  <!-- About -->
+  <section id="about" class="container py-5">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="text-center fs-5">I am a passionate developer with 6+ years of experience in building modern, responsive, and scalable web applications. Skilled in Angular, Java, and full-stack development, I focus on delivering high-quality user experiences and robust backend solutions.</p>
+  </section>
 
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li><b>Senior Software Developer</b>, Wama Software, Ahmedabad (Feb 2020 – 2025)
-          <ul>
-            <li>Focused on back-end development with CodeIgniter, transitioned to Laravel within two years, and later led Angular/AngularJS projects as Senior Frontend Developer.</li>
-            <li>Guided team members and managed client projects.</li>
-            <li>Worked with RxJS, NgRx, Tailwind CSS, Angular Material, and PrimeNG.</li>
-            <li>Used AI tools for rapid prototyping, boosting development speed by 5–10x.</li>
-          </ul>
-        </li>
-        <li><b>Software Developer</b>, Techbit Software, Surat (2019 – 2020)
-          <ul>
-            <li>Contributed to CSS styling and server-side programming with Laravel, CodeIgniter, and PHP.</li>
-          </ul>
-        </li>
-        <li><b>Software Developer Intern</b>, Securemetasys Infotech, Surat (2018 – 2019)
-          <ul>
-            <li>Worked on CakePHP, Java Spring, and Hibernate.</li>
-            <li>Gained hands-on experience on live projects.</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+  <!-- Skills -->
+  <section id="skills" class="container py-5">
+    <h2 class="text-center mb-4">Skills</h2>
+    <div class="text-center">
+      <span class="chip">Angular</span>
+      <span class="chip">Java</span>
+      <span class="chip">Spring Boot</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">SQL</span>
+      <span class="chip">HTML & CSS</span>
+      <span class="chip">Tailwind CSS</span>
+    </div>
+  </section>
 
-    <section>
-      <h2>Languages</h2>
-      <p>English, Hindi, Gujarati</p>
-    </section>
+  <!-- Experience -->
+  <section id="experience" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Experience</h2>
+      <div id="expCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="exp-card">
+              <h3>Wama Software Ltd (Ahmedabad)</h3>
+              <h4>Senior Angular Developer (2020 - 2025)</h4>
+              <p>Worked on scalable Angular apps with NgRx, API integrations, and performance optimization.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="exp-card">
+              <h3>Tecbit Solutions (Surat)</h3>
+              <h4>Full Stack Developer (2019 - 2020)</h4>
+              <p>Built enterprise apps using Angular + Spring Boot, optimized APIs, and enhanced UI performance.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="exp-card">
+              <h3>Securemeta Pvt Ltd (Surat)</h3>
+              <h4>Intern Developer (2019)</h4>
+              <p>Created responsive UIs with Angular & JavaScript, implemented reusable components.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+		<!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#expCarousel" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#expCarousel" data-bs-slide="next">
+         <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+        </button>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      <p>© 2025 Devis Makavana</p>
-    </footer>
-  </div>
+  <!-- Contact -->
+  <section id="contact" class="container py-5 text-center">
+    <h2 class="mb-4">Contact</h2>
+    <p class="fs-5">Let’s connect! Reach me at:</p>
+    <a href="mailto:djmakvana47@gmail.com">Email</a>
+    <a href="https://github.com/DevisMakvana" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/devis-makvana-340754161/" target="_blank">LinkedIn</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Devis Makavana | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
