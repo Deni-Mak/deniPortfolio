@@ -106,6 +106,26 @@
     #contact a:hover { background:#6a11cb; transform:translateY(-3px); }
 
     footer { background:#333; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
+
+	    ul.custom-list {
+      list-style: none;          /* remove default bullets */
+      padding-left: 0;           /* remove left padding */
+    }
+
+    ul.custom-list li {
+      text-align: justify;       /* justify text */
+      margin-bottom: 8px;        /* spacing between items */
+      position: relative;        /* allow custom bullet */
+      padding-left: 25px;        /* space for arrow */
+    }
+
+    ul.custom-list li::before {
+      content: "➔";              /* arrow symbol */
+      position: absolute;
+      left: 0;
+      color: #0073e6;            /* arrow color */
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -173,7 +193,7 @@ expand my skill set in line with technological advancements.</p>
             <div class="exp-card">
               <h3>Wama Software Ltd (Ahmedabad)</h3>
               <h4>Senior Angular Developer (2020 - 2025)</h4>
-              <ul>
+              <ul class="custom-list">
 				<li>Focused on back-end development with CodeIgniter, transitioned to Laravel within two years.and after i led
 client projects (AngularJS) and in-house products (Angular) as Senior Frontend Developer.</li>
 				<li>Managed client project (AngularJS) independently while guiding team members through development
@@ -189,7 +209,7 @@ my projects to build responsive, scalable, and maintainable applications.</li>
             <div class="exp-card">
               <h3>Tecbit Solutions (Surat)</h3>
               <h4>Full Stack Developer (2019 - 2020)</h4>
-              <ul>
+              <ul class="custom-list">s
 				  <li>Contributed to all development layers, focusing on CSS styling and server-side programming through Laravel,
 CodeIgniter, and core PHP.</li>
 			  </ul>
@@ -199,7 +219,7 @@ CodeIgniter, and core PHP.</li>
             <div class="exp-card">
               <h3>Securemeta Pvt Ltd (Surat)</h3>
               <h4>Intern Developer (2019)</h4>
-              <ul>
+              <ul class="custom-list">
 				  <li>I started my career with this company, where I worked as an intern developer using CakePHP, Java Spring, and
 Hibernate. During my internship, I gained hands-on experience by working on real-life and live projects, which
 helped me grow both technically and professionally.</li>
