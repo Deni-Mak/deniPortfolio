@@ -29,12 +29,50 @@
 	}
 
 	/* Skills Section */
-	#skills {
-	  background: rgba(37, 117, 252, 0.1); /* light blue transparent */
-	  border-radius: 10px;
-	  padding: 3rem 1rem;
-	  margin-bottom: 2rem;
-	}
+	.skills-section {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .skills-section h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .skill-card img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .skill-card p {
+      font-size: 15px;
+      font-weight: 600;
+      color: #444;
+      margin: 0;
+    }
 
 	/* Experience Section */
 	#experience {
@@ -167,20 +205,68 @@ expand my skill set in line with technological advancements.</p>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="container py-5">
-    <h2 class="text-center mb-4">Skills</h2>
-    <div class="text-center">
-      <span class="chip">Angular</span>
-	  <span class="chip">AngularJS</span>
-      <span class="chip">TypeScript</span>
-	  <span class="chip">Java (Spring Boot)</span>
-      <span class="chip">Node.js</span>
-      <span class="chip">MYSQL/RDBMS</span>
-	  <span class="chip">MongoDB</span>
-      <span class="chip">HTML & CSS/SCSS</span>
-      <span class="chip">Tailwind CSS</span>
-	  <span class="chip">PHP (Laravel, Codignater, CakePHP)</span>
-    </div>
+  <section class="skills-section container py-5">
+    <div>
+	    <h2>My Skills</h2>
+	    <div class="skills-grid">
+	      
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML">
+	        <p>HTML</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+	        <p>CSS</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+	        <p>JavaScript</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/919/919832.png" alt="TypeScript">
+	        <p>TypeScript</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="Angular">
+	        <p>Angular</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="PHP">
+	        <p>PHP</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="Laravel">
+	        <p>Laravel</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/919/919841.png" alt="CakePHP">
+	        <p>CakePHP</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/919/919837.png" alt="CodeIgniter">
+	        <p>CodeIgniter</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+	        <p>Java</p>
+	      </div>
+	
+	      <div class="skill-card">
+	        <img src="https://cdn-icons-png.flaticon.com/512/919/919856.png" alt="Spring Boot">
+	        <p>Spring Boot</p>
+	      </div>
+	
+	    </div>
+	  </div>
   </section>
 
   <!-- Experience -->
